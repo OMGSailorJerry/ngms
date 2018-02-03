@@ -24,7 +24,7 @@ export class RecipeService {
       'http://maxpixel.freegreatpicture.com/static/photo/640/Melon-Meat-Fruit-Ham-Food-625130.jpg',
       [
         new Ingredient('Meat', 1),
-        new Ingredient('Bans', 2)
+        new Ingredient('Buns', 2)
       ])
   ];
 
@@ -33,6 +33,11 @@ export class RecipeService {
   getRecipe() {
     console.log(this.recipes);
     return this.recipes.slice();
+  }
+
+  storeRecipes(recipes: Recipe[]) {
+    console.log(recipes);
+    this.recipes = recipes;
   }
 
   getRecipeById(index: number) {
