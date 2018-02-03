@@ -22,13 +22,8 @@ export class HeaderComponent {
         }
       );
   }
+
   onFetchData() {
-    this.dataStorageService.fetchRecipes()
-      .subscribe(
-        (response: Response) => {
-          this.recipeService.storeRecipes(response.json());
-          console.log(response);
-        }
-      );
+    this.dataStorageService.getRecipes();
   }
 }
