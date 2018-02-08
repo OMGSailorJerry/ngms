@@ -12,12 +12,6 @@ import { AuthGruard } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-  { path: 'recipes', component: RecipesComponent, children: [
-    { path: '', component: RecipesStartComponent },
-    { path: 'new', component: RecipeEditComponent, canActivate: [AuthGruard] },
-    { path: ':id', component: RecipesDetailComponent },
-    { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthGruard]  }
-  ] },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent }
