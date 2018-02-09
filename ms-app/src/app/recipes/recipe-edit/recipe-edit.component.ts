@@ -99,6 +99,11 @@ export class RecipeEditComponent implements OnInit {
       'description': new FormControl(recipeDescription, Validators.required),
       'ingredients': recipeIngredients
     });
+    console.log(this.recipeForm.get('ingredients'));
+  }
+
+  getIngredients() {
+    return (<FormArray>this.recipeForm.controls['ingredients']).controls;
   }
 
 }
