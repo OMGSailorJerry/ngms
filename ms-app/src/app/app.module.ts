@@ -18,6 +18,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGruard } from './auth/auth-guard.service';
 import { RecipesModule } from './recipes/recipes.module';
 import { RecipesRoutingModule } from './recipes/recipes-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,6 @@ import { RecipesRoutingModule } from './recipes/recipes-routing.module';
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     SignupComponent,
     SigninComponent
   ],
@@ -35,7 +35,8 @@ import { RecipesRoutingModule } from './recipes/recipes-routing.module';
     HttpModule,
     AppRoutingModule,
     RecipesModule,
-    RecipesRoutingModule
+    RecipesRoutingModule,
+    SharedModule
   ],
   providers: [
     ShoppingListService,
