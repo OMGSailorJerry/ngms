@@ -9,8 +9,8 @@ import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 import { RecipesDetailComponent } from './recipes-detail/recipes-detail.component';
 import { RecipesItemComponent } from './recipes-list/recipes-item/recipes-item.component';
 import { DropdownDirective } from '../shared/dropdown.directive';
-import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { RecipesRoutingModule } from './recipes-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule,
+    RecipesRoutingModule,
     SharedModule
   ]
 })
