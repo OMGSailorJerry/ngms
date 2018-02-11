@@ -19,6 +19,5 @@ export class AuthInterceptor implements HttpInterceptor {
         const copieReq = req.clone({params: req.params.set('auth', authState.token)});
         return next.handle(copieReq);
       });
-    // return null;
   }
 }
